@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+
+@font-face {
+  font-family: 'Saiyan-Sans';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Saiyan-Sans'),
+    url('font/Saiyan-Sans.woff') format('woff');
+}
+
+@theme {
+  --font-dbz: 'Saiyan-Sans', sans-serif;
+}

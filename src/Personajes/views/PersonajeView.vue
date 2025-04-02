@@ -2,24 +2,24 @@
   <section>
     <header class="mt-8">
       <h1
-        class="text-center text-2xl md:text-4xl font-bold text-amber-500 capitalize font-dbz tracking-wider"
+        class="text-center text-2xl md:text-4xl font-bold text-amber-600 capitalize font-dbz tracking-wider"
       >
         dragon ball z - personajes
       </h1>
-      <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-1 max-w-4xl mx-auto mt-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-1 max-w-4xl mx-auto mt-12 gap-10">
         <div
-          class="flex flex-col items-center justify-center"
+          class="flex flex-col items-center justify-center rounded-lg bg-gradient-to-b from-amber-300 to-amber-600 p-4 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
           v-for="personaje in personajes"
           :key="personaje.id"
         >
-          <h2 class="text-xl font-bold text-gray-800 font-dbz tracking-wider">
+          <h2 class="text-4xl font-bold text-amber-600 font-dbz tracking-widest">
             {{ personaje.name }}
           </h2>
           <div class="flex flex-col items-center justify-center">
             <img
               :src="personaje.image"
               :alt="personaje.name"
-              class="size-80 object-contain mb-4 drop-shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer hover:skew-30 hover:rotate-3"
+              class="size-80 object-contain mb-4 hover:drop-shadow-3xl hover:scale-125 transition-all duration-300 cursor-pointer"
             />
           </div>
         </div>
@@ -48,3 +48,16 @@ onMounted(() => {
   fetchData()
 })
 </script>
+
+<style>
+.ts {
+  text-shadow:
+    0 0 5px #000,
+    0 0 10px #000,
+    0 0 15px #000,
+    0 0 20px #000,
+    0 0 25px #000,
+    0 0 30px #000,
+    0 0 35px #000;
+}
+</style>

@@ -11,4 +11,6 @@
 
 @theme {
   --font-dbz: 'Saiyan-Sans', sans-serif;
+
+  --drop-shadow-3xl: 0 35px 35px rgba(0, 0, 0, 0.5);
 }

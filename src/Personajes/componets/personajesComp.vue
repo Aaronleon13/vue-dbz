@@ -10,6 +10,7 @@
       </h2>
       <div class="flex flex-col items-center justify-center">
         <img
+          @click="sendInfoView(personaje.id)"
           :src="personaje.image"
           :alt="personaje.name"
           class="size-80 object-contain mb-4 hover:drop-shadow-3xl hover:scale-125 transition-all duration-300 cursor-pointer"
@@ -21,6 +22,13 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const sendInfoView = (id) => {
+  router.push({ name: 'informacion', id: id }) //Tengo que enviar el id a la vista info
+}
 
 const personajes = ref([])
 const links = ref([])

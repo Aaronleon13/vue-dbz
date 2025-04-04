@@ -27,7 +27,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const sendInfoView = (id) => {
-  router.push({ name: 'informacion', id: id }) //Tengo que enviar el id a la vista info
+  router.push({ name: 'informacion', params: { id: id } })
 }
 
 const personajes = ref([])
@@ -38,9 +38,6 @@ const fetchData = async () => {
   const data = await response.json()
   personajes.value = data.items
   links.value = data.links
-
-  console.log(links.value)
-  console.log(personajes.value)
 }
 
 onMounted(() => {
